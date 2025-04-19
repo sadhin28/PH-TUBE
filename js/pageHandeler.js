@@ -1,0 +1,24 @@
+document.getElementById('AllBtn').addEventListener('click',function(){
+    document.getElementById('music').classList.add('hidden')
+   document.getElementById('All').classList.remove('hidden')
+   document.getElementById('comedy').classList.add('hidden')
+   document.getElementById('drawing').classList.add('hidden')
+})
+document.getElementById('MusicBtn').addEventListener('click',function(){
+   document.getElementById('music').classList.remove('hidden')
+   document.getElementById('All').classList.add('hidden')
+   document.getElementById('comedy').classList.add('hidden')
+   document.getElementById('drawing').classList.add('hidden')
+})
+document.getElementById('comedyBtn').addEventListener('click',function(){
+   document.getElementById('music').classList.add('hidden')
+   document.getElementById('All').classList.add('hidden')
+   document.getElementById('comedy').classList.remove('hidden')
+   document.getElementById('drawing').classList.add('hidden')
+})
+document.getElementById('drawingBtn').addEventListener('click',function(){
+   document.getElementById('music').classList.add('hidden')
+   document.getElementById('All').classList.add('hidden')
+   document.getElementById('comedy').classList.add('hidden')
+   document.getElementById('drawing').classList.remove('hidden')
+})
