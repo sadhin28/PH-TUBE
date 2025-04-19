@@ -8,7 +8,14 @@ const loadCatagories = ()=>{
     
 }
 const displayCatagories = (data)=>{
-    console.log(data)
+   const categoriesContainer= document.getElementById('btnCatagoris')
+    data.forEach(item => {
+        console.log(item)
+        const button = document.createElement('button')
+        button.classList='btn';
+        button.innerText=item.category;
+        categoriesContainer.append(button)
+    });
 }
 
 loadCatagories()
