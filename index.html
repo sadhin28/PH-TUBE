@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,51 +9,49 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="assets/Icon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body class="w-11/12 mx-auto">
     <header class=" sticky top-0 z-30 h-40 bg-gray-50 ">
-        <div class="items-center navbar bg-[#F9F7F3] shadow-sm flex justify-between lg:text-2xl lg:font-bold  font-bold">
-           <img src="assets/Logo.png" alt="" class="w-[100px]">
-          <div id="search">
-            <input type="text" placeholder="Sort by view" class="input input-bordered w-24  md:w-auto text-center" />
-          </div>
-          
-           <button class="btn bg-red-500 text-white">Blog</button>
+        <div
+            class="border-b py-3 items-center navbar bg-[#F9F7F3] shadow-sm flex justify-between lg:text-2xl lg:font-bold  font-bold">
+            <img src="assets/Logo.png" alt="" class="w-[100px]">
+            <div id="search">
+                <input type="text" placeholder="Sort by view"
+                    class="input input-bordered w-24  md:w-auto text-center" />
+            </div>
+
+            <button class="btn bg-red-500 text-white">Blog</button>
         </div>
         <div class="flex justify-center mt-6">
             <div class="flex space-x-4 mb-6 ">
-                <button id="AllBtn" onclick="showPage('all')"
-                    class="px-4 py-2 bg-gray-500 text-white rounded-md">All</button>
-                <button id="MusicBtn" onclick="showPage('music')"
-                    class="px-4 py-2 bg-gray-500 text-white rounded-md">Music</button>
-                <button id="comedyBtn" onclick="showPage('comedy')"
-                    class="px-4 py-2 bg-gray-500 text-white rounded-md">Comedy</button>
-                <button id="drawingBtn" onclick="showPage('drawing')"
-                    class="px-4 py-2 bg-gray-500 text-white rounded-md">Drawing</button>
+                <button class="tab px-6 py-2 bg-red-500 text-white rounded" id="btn-all">All</button>
+                <button class="tab px-6 py-2 bg-gray-400 text-white rounded" id="btn-music">Music</button>
+                <button class="tab px-6 py-2 bg-gray-400 text-white rounded" id="btn-comedy">Comedy</button>
+                <button class="tab px-6 py-2 bg-gray-400 text-white rounded" id="btn-drawing">Drawing</button>
             </div>
         </div>
     </header>
     <main class="lg:w-300  mx-auto mt-10">
-         <div id="All">
-           <h1>all</h1>
-         </div>
-         <div id="music" class="hidden">
-           <h1>music</h1>
-         </div>
-         <div id="comedy" class="hidden">
-           <h1>comedy</h1>
-         </div>
-         <div id="drawing" class="hidden">
-           <h1>drawing</h1>
-         </div>
+        <div id="pages" class="w-full max-w-md">
+            <div id="page-all" class="page block text-center text-xl font-semibold">🎯 Welcome to the All Page!</div>
+            <div id="page-music" class="page hidden text-center text-xl font-semibold">🎵 Welcome to the Music Page!
+            </div>
+            <div id="page-comedy" class="page hidden text-center text-xl font-semibold">😂 Welcome to the Comedy Page!
+            </div>
+            <div id="page-drawing" class="page hidden text-center text-xl font-semibold">🎨 Welcome to the Drawing Page!
+            </div>
+        </div>
     </main>
     <footer>
 
     </footer>
+    <script src="js/video.js"></script>
     <script src="js/pageHandeler.js"></script>
 </body>
+
 </html>
