@@ -26,6 +26,8 @@ const displayVideos = (video) => {
         <div class="min-h-[300px] flex flex-col gap-5 justify-center items-center">
             
         <img src="assets/Icon.png"/>
+
+        <p class="font-bold lg:text-3xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
         </div> 
 
         `
