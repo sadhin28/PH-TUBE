@@ -1,21 +1,28 @@
 <div>
+<p>
+  ...............I implement this................<br>
+  
+  load and display data initially <br>
+onclick load and display data  <br>
+Complex object accessing  <br>
+toggle active class functionality  <br>
+search functionality  <br>
+load and display single data  <br>
+display data in a modal  <br>
+load and display single catagory data <br>
+conditional rendering if array dont have any data  <br>
+conditional rendering  if a value empty  <br>
+conditional rendering if a value length is zero  <br>
 
-  ..............Dynamic Ph-Tube...............
-<<<work>>>
-load and display data initially
-onclick load and display data
-Complex object accessing
-toggle active class functionality
-search functionality
-load and display single data
-display data in a modal
-load and display single catagory data
-conditional rendering if array dont have any data
-conditional rendering  if a value empty
-conditional rendering if a value length is zero
+  .............using technology..............  <br>
 
-.............using technology..............
-Javascript
-DaisyUi
-TailwindCss
-</div>
+  
+Javascript <br>
+DaisyUi <br>
+TailwindCss <br>
+
+</p>
+<div/>
+
+
+
