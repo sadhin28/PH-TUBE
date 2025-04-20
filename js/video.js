@@ -19,7 +19,20 @@ function convertTime(time){
 
 const displayVideos = (video) => {
     const videoContainer = document.getElementById('videos');
-    videoContainer.innerHTML=""
+    videoContainer.innerHTML="";
+    if(video.length == 0){
+        videoContainer.classList.remove("grid")
+        videoContainer.innerHTML=`
+        <div class="min-h-[300px] flex flex-col gap-5 justify-center items-center">
+            
+        <img src="assets/Icon.png"/>
+        </div> 
+
+        `
+        return;
+    }else{
+        videoContainer.classList.add("grid")
+    }
     video.forEach(element => {
         console.log(element)
         const card = document.createElement('div')
