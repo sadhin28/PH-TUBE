@@ -33,8 +33,9 @@ const displayVideos = (video) => {
         `
         return;
     }else{
-        videoContainer.classList.add("grid")
+    videoContainer.classList.add("grid")
     }
+    
     video.forEach(element => {
         console.log(element)
         const card = document.createElement('div')
