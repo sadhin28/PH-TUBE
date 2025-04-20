@@ -23,41 +23,47 @@
             <div id="search">
                 <input id="search-Input" type="text" placeholder="Sort by view "
                     class="input input-bordered w-24  md:w-auto text-center" />
-                    
+
             </div>
 
             <button class="btn bg-red-500 text-white">Blog</button>
         </div>
         <div class="flex justify-center mt-6">
             <div id="btnCatagoris" class="flex space-x-4 mb-6">
-               
-        </div>
-    </header>
-    <main class="mt-10 mb-20" >
-       <section id="videos" class="grid  md:grid-cols-2 lg:grid-cols-3  gap-10">
 
-       </section>
+            </div>
+    </header>
+    <main class="mt-10 mb-20">
+        <section id="videos" class="grid  md:grid-cols-2 lg:grid-cols-3  gap-10">
+
+        </section>
     </main>
     <!-- Open the modal using ID.showModal() method -->
-<button id="showmodal" class="btn hidden" onclick="customModalData.showModal()">open modal</button>
-<dialog id="customModalData" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
-   <div id="modalcontent">
-    
-   </div>
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button id="modalClose" class="btn  bg-red-500 text-white">Close</button>
-      </form>
-    </div>
-  </div>
-</dialog>
-    <footer>
+    <button id="showmodal" class="btn hidden" onclick="customModalData.showModal()">open modal</button>
+    <dialog id="customModalData" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modalcontent">
 
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button id="modalClose" class="btn  bg-red-500 text-white">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <footer class=" footer sm:footer-horizontal footer-center bg-[#F9F7F3] font-bold  text-base-content p-4">
+
+        <aside>
+            <p>Copyright © <span id="year"></span> All right reserved by Ph-Tube.</p>
+        </aside>
     </footer>
     <script src="js/category.js"></script>
     <script src="js/video.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
