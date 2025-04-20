@@ -28,6 +28,7 @@ const displayVideos = (video) => {
         <img src="assets/Icon.png"/>
 
         <p class="font-bold lg:text-3xl md:text-2xl ">Oops!! Sorry, There is no   content here</p>
+        
         </div> 
 
         `
@@ -35,7 +36,7 @@ const displayVideos = (video) => {
     }else{
     videoContainer.classList.add("grid")
     }
-    
+
     video.forEach(element => {
         console.log(element)
         const card = document.createElement('div')
@@ -52,7 +53,7 @@ const displayVideos = (video) => {
                         }
                   </div>
                   </figure>
-                  </div>
+         </div>
                   <div class="flex gap-5   items-center">
                       <div class>
                               <img class=" object-cover mt-2 h-10 w-10 rounded-full" src=${element.authors[0].profile_picture}/>
@@ -70,7 +71,12 @@ const displayVideos = (video) => {
          
                              <p >${element.others.views } Views</p>
                       
+
                       </div>
+                  </div>
+
+                  <div>
+                        <p><button onclick="loadDisplayDetails('${element.video_id}') " class="btn text-white bg-red-500 mt-3">Details</button></p>
                   </div>
         </div>
 
