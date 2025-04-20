@@ -50,7 +50,7 @@ const displayDetails=(video)=>{
     document.getElementById('showmodal').click();
   
     detailsContainer.innerHTML=`
-       <img class="rounded-2xl" src=${video.thumbnail}/>
+       <img class="rounded-2xl object-cover h-70 w-full " src=${video.thumbnail}/>
         <p class="mt-5 text-justify" >${video.description}</p>
     `
 }
