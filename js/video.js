@@ -18,10 +18,17 @@ const displayVideos = (video) => {
         card.classList = 'card card-compact'
         card.innerHTML = `
         <div class="">
-                  <div><figure class="h-[200px]">
+                  <div>
+                  <figure class="h-[200px] relative">
                   <img class="w-full h-full object-cover"
                   src=${element.thumbnail}
-                  </figure></div>
+                  <div>
+                        ${element.others.posted_date === ''? "":
+                       ` <span class="absolute right-[7px] bottom-[7px] bg-black px-4 py-2 rounded text-white">${element.others.posted_date}</span>`
+                        }
+                  </div>
+                  </figure>
+                  </div>
                   <div class="flex gap-5   items-center">
                       <div class>
                               <img class=" object-cover mt-2 h-10 w-10 rounded-full" src=${element.authors[0].profile_picture}/>
@@ -34,7 +41,7 @@ const displayVideos = (video) => {
          
                              <div class="flex gap-3 items-center">
                              <p>${element.authors[0].profile_name}</p>
-                             <img class="h-5 w-5 " src="https://img.icons8.com/?size=96&id=D9RtvkuOe31p&format=png" />
+                             ${element.authors[0].verified === true ? `<img class="h-5 w-5 " src="https://img.icons8.com/?size=96&id=D9RtvkuOe31p&format=png" />`: ""}
                              </div>
          
                              <p >${element.others.views } Views</p>
