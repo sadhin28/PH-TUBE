@@ -8,10 +8,18 @@ const LoadVideos = () => {
 
 };
 
-
+function convertTime(time){
+    //get hour and rest second
+     const hour = parseInt (time /3600);
+     let remainingsecond = time%3600;
+     const minit= parseInt(remainingsecond/60);
+     remainingsecond =remainingsecond % 60
+      return `${hour} hour ${minit}  minuite ${remainingsecond} second ago `
+  }
 
 const displayVideos = (video) => {
-    const videoContainer = document.getElementById('videos')
+    const videoContainer = document.getElementById('videos');
+    videoContainer.innerHTML=""
     video.forEach(element => {
         console.log(element)
         const card = document.createElement('div')
@@ -24,7 +32,7 @@ const displayVideos = (video) => {
                   src=${element.thumbnail}
                   <div>
                         ${element.others.posted_date === ''? "":
-                       ` <span class="absolute right-[7px] bottom-[7px] bg-black px-4 py-2 rounded text-white">${element.others.posted_date}</span>`
+                       ` <span class="absolute right-[7px] bottom-[7px] bg-black px-4 py-2 rounded text-white text-xs ">${convertTime(element.others.posted_date)}</span>`
                         }
                   </div>
                   </figure>
@@ -49,11 +57,8 @@ const displayVideos = (video) => {
                       </div>
                   </div>
         </div>
-    
-
 
         `
-
         videoContainer.append(card)
     });
 }
