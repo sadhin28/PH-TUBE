@@ -68,5 +68,8 @@ const displayCatagories = (data) => {
         categoriesContainer.append(buttonCatagories)
     });
 }
-
+//search 
+document.getElementById('search-Input').addEventListener('keyup',function(e){
+    LoadVideos(e.target.value)
+})
 loadCatagories()

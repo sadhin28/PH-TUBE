@@ -1,5 +1,5 @@
-const LoadVideos = () => {
-    fetch('https://openapi.programming-hero.com/api/phero-tube/videos')
+const LoadVideos = (searchText= "") => {
+    fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`)
         .then(res => res.json())
         .then((data) => displayVideos(data.videos
         ))
@@ -84,5 +84,7 @@ const displayVideos = (video) => {
         videoContainer.append(card)
     });
 }
-
-LoadVideos()
+document.getElementById('search-Input').addEventListener('keyup',function(e){
+    LoadVideos(e.target.value)
+})
+LoadVideos();
